@@ -1,0 +1,35 @@
+{
+  "name": "@framework/workflow",
+  "version": "0.2.0",
+  "description": "Multi-stage, multi-step resumable workflow engine with policies and persistence.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://github.com/mohamedhabibwork/framework-workflow#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedhabibwork/framework.git",
+    "directory": "packages/workflow"
+  },
+  "bugs": {
+    "url": "https://github.com/mohamedhabibwork/framework/issues"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@framework/core": "workspace:*",
+    "@framework/database": "workspace:*",
+    "@framework/events": "workspace:*",
+    "@framework/http": "workspace:*",
+    "@framework/queue": "workspace:*",
+    "@framework/validation": "workspace:*",
+    "bullmq": "6.4.1",
+    "drizzle-orm": "0.45.4",
+    "hono": "4.13.13",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@framework/testing": "workspace:*"
+  }
+}
