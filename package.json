@@ -1,0 +1,47 @@
+{
+  "name": "@framework/workflow",
+  "version": "0.2.0",
+  "description": "Multi-stage, multi-step resumable workflow engine with policies and persistence.",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://github.com/mohamedhabibwork/framework/tree/main/packages/workflow",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedhabibwork/framework-workflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mohamedhabibwork/framework/issues"
+  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@framework/core": "github:mohamedhabibwork/framework-core#standalone",
+    "@framework/database": "github:mohamedhabibwork/framework-database#standalone",
+    "@framework/events": "github:mohamedhabibwork/framework-events#standalone",
+    "@framework/http": "github:mohamedhabibwork/framework-http#standalone",
+    "@framework/queue": "github:mohamedhabibwork/framework-queue#standalone",
+    "@framework/validation": "github:mohamedhabibwork/framework-validation#standalone",
+    "bullmq": "6.4.1",
+    "drizzle-orm": "0.45.4",
+    "hono": "4.13.13",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@framework/testing": "github:mohamedhabibwork/framework-testing#standalone",
+    "@types/bun": "1.4.2",
+    "oxfmt": "0.75.0",
+    "oxlint": "1.90.0",
+    "typescript": "7.0.2"
+  }
+}
