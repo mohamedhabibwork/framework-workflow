@@ -47,7 +47,7 @@ export interface ActionDefinition<TInput extends WorkflowState = WorkflowState, 
   readonly compensate?: (state: WorkflowState, context: WorkflowContext) => void | Promise<void>;
 }
 
-// biome-ignore lint/suspicious/noExplicitAny: definitions are heterogeneous; erased at the runner boundary
+// oxlint-disable-next-line typescript/no-explicit-any -- definitions are heterogeneous; erased at the runner boundary
 export type AnyActionDefinition = ActionDefinition<any, any>;
 
 export interface ParallelGroup {

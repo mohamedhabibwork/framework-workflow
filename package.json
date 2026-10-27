@@ -1,21 +1,29 @@
 {
   "name": "@framework/workflow",
   "version": "0.2.0",
-  "description": "Multi-stage, multi-step resumable workflow engine with policies and persistence.",
   "private": true,
-  "license": "MIT",
-  "type": "module",
+  "description": "Multi-stage, multi-step resumable workflow engine with policies and persistence.",
   "homepage": "https://github.com/mohamedhabibwork/framework-workflow#readme",
+  "bugs": {
+    "url": "https://github.com/mohamedhabibwork/framework/issues"
+  },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mohamedhabibwork/framework.git",
     "directory": "packages/workflow"
   },
-  "bugs": {
-    "url": "https://github.com/mohamedhabibwork/framework/issues"
-  },
+  "type": "module",
   "exports": {
     ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test"
   },
   "dependencies": {
     "@framework/core": "workspace:*",
