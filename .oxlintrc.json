@@ -1,0 +1,40 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error"
+  },
+  "plugins": ["typescript", "unicorn", "import", "promise"],
+  "rules": {
+    "eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_", "caughtErrorsIgnorePattern": "^_" }
+    ],
+    "eslint/no-console": ["warn", { "allow": ["warn", "error"] }],
+    "eslint/no-await-in-loop": "off",
+    "eslint/no-shadow": "off",
+    "eslint/no-unused-expressions": "off",
+    "eslint/no-new": "off",
+    "eslint/no-useless-constructor": "off",
+    "eslint/no-underscore-dangle": "off",
+    "typescript/no-explicit-any": "error",
+    "typescript/no-non-null-assertion": "error",
+    "typescript/no-this-alias": "off",
+    "unicorn/prefer-node-protocol": "error",
+    "unicorn/no-array-sort": "off",
+    "unicorn/no-array-reverse": "off",
+    "unicorn/consistent-function-scoping": "off",
+    "unicorn/no-useless-spread": "off",
+    "unicorn/no-useless-fallback-in-spread": "off",
+    "import/no-duplicates": "off"
+  },
+  "overrides": [
+    {
+      "files": ["scripts/**/*.{ts,js,mjs,cjs}", "tests/**/*.ts", "**/tests/**/*.ts"],
+      "rules": {
+        "eslint/no-console": "off"
+      }
+    }
+  ],
+  "ignorePatterns": ["dist", "coverage", "node_modules", ".tmp", "apps/docs", "template", "**/database/migrations/meta"]
+}
